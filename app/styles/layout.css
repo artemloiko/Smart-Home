@@ -1,0 +1,76 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 0 20px;
+}
+/* ========== mobile layout changes ========== */
+.content {
+  margin-top: 64px;
+}
+.content-main .content-head,
+.content-head-controls,
+.menu-devices {
+  display: none;
+}
+
+/* ========== head layout ========== */
+
+.head {
+  position: fixed;
+  height: 64px;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav {
+  position: absolute;
+  width: 70%;
+  height: 100vh;
+  right: 0;
+  top: 66px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.nav-overlay {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 64px;
+}
+
+/* ========== content layout ========== */
+
+.content-cards {
+  display: flex;
+  flex-flow: row nowrap;
+  overflow: hidden;
+}
+.card {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  /* width: 200px;
+  height: 100px; */
+  min-width: 200px;
+  min-height: 100px;
+  margin-right: 20px;
+}
+.card--large {
+  height: 120px;
+}
+
+.content-main {
+  display: flex;
+  flex-direction: column;
+}
+
+

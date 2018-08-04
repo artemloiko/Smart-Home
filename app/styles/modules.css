@@ -1,0 +1,237 @@
+
+.nav-opened {
+  overflow: hidden;
+}
+/* ========== head elements ========== */
+
+.head {
+  background: #fff;
+  border: none;
+  padding: 0 20px;
+}
+.logo {
+  height: 39px;
+  width: 110px;
+}
+
+/* ---------- nav style ---------- */
+
+.nav {
+  background: #fff;
+  font-family: 'Arial', serif;
+  font-weight: bold;
+  font-size: 22px;
+  transition: .2s ease all;
+  transform: translate(100%);
+}
+.nav__link {
+  margin: 20px 0;
+  color: #333333;
+  position: relative;
+}
+.nav__link::after {
+  content: '';
+  display: block;
+  height: 0;
+  width: 100%;
+  margin-top: 20px;
+  border: 1px solid #858585;
+}
+.nav-overlay {
+  transition: .3s ease all;
+  background-color: rgba(0, 0, 0);
+  opacity: 0;
+}
+.nav-toggle {
+  position: relative;
+  padding: 15px;
+  padding-right: 0;
+  background: transparent;
+  border: none;
+  margin: 7px 0;
+}
+.nav-toggle:focus {
+  outline-width: 0;
+}
+.nav-toggle [class*='bar-'] {
+  background: #333;
+  display: block;
+  border-radius: 2px;
+  height: 3px;
+  width: 16px;
+  margin-bottom: 3px;
+  transform: rotate(0deg);
+  transition: .2s ease all;
+}
+
+/* ---------- nav-opened changes ---------- */
+.nav-opened .nav-overlay {
+  opacity: 0.5;
+  bottom: 0;
+}
+.nav-opened .nav {
+  transform: translate(0);
+}
+.nav-opened .head {
+  border-bottom: 2px solid #f0f0f0;
+}
+.nav-opened .bar-top {
+  transform: translate(10px) rotate(45deg);
+  transform-origin: 0% 0%;
+  width: 50%;
+}
+.nav-opened .bar-mid {
+  opacity: .9;
+}
+.nav-opened .bar-bot {
+  transform: translate(10px) rotate(-45deg);
+  transform-origin: 0 100%;
+  width: 50%;
+}
+
+
+
+
+/* ========== content elements ========== */
+
+/* ---------- card style ---------- */
+.card {
+  padding: 14px;
+  background: #F7F7F7;
+  border-radius: 20px;
+}
+.card__title {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+.card__subtitle {
+  font-size: 12px;
+  color: #858585;
+}
+.card__img {
+  margin-bottom: auto;
+  width: 24px;
+  height: 24px;
+}
+/* ---------- content common style ---------- */
+.content-head-container {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+}
+.content-head {
+  font-size: 1.125em;
+  margin: 20px 0;
+}
+.content-scenarios, 
+.content-devices {
+  margin-top: 10px;
+}
+/* ---------- content controls style ---------- */
+.menu-devices-mobile {
+  box-sizing: border-box;
+  background: #FFD93E;
+  height: 30px;
+  width: auto;
+  padding-left: 10px;
+  padding-right: 25px;
+  border-radius: 20px;
+  text-align: center;
+  font-size: 0.8125em;
+  font-weight: bolder;
+  appearance: none;
+}
+.select-arrow {
+  width: 0;
+  height: 0;
+  position: absolute;
+  right: 0;
+  transition: .1s ease all;
+}
+.select-arrow::after {
+  content: '';
+  display: block;
+  position: absolute;
+  padding: 3px;
+  right: 31px;
+  top: -6px;
+  border: solid black;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+.menu-devices-mobile:focus {
+  outline: none;
+}
+.menu-devices-mobile option {
+  background: #f7f7f7;
+}
+
+/* ---------- content main style ---------- */
+
+.content-main {
+  border-radius: 20px;
+  background-repeat: no-repeat;
+  background-image: url(images/bg1x.png);
+  background-size: cover;
+  background-position: center top;
+  padding: 20px 0 20px 20px;
+}
+.content-main__welcome {
+  font-size: 1.125em;
+  margin: 0;
+}
+.content-main__info {
+  font-size: 0.75em;
+  margin: 5px 0 15px 0;
+}
+.content-main__forecasts {
+  display: flex;
+  flex-flow: row nowrap;
+  margin-bottom: 20px;
+}
+.forecast {
+  margin-right: 20px;
+}
+.forecast__place {
+  font-size: 0.75em;
+  color: #858585;
+  margin-bottom: 5px;
+}
+.forecast__temperature {
+  font-weight: bold;
+  font-size: 1.5em;
+}
+.forecast__img {
+  width: 18px;
+}
+
+
+
+
+/* ========== footer elements ========== */
+
+.footer {
+  margin-top: 30px;
+  font-size: 12px;
+  color: #888;
+}
+.footer-pages {
+  display: flex;
+  flex-flow: row wrap;
+}
+.footer-pages__link {
+  padding: 5px 0;
+  width: 50%;
+  text-align: left;
+}
+.footer-pages__link:nth-child(even) {
+  text-align: right;
+}
+.copyright {
+  display: block;
+  padding: 10px 0;
+  text-align: center;
+  color: #333;
+}
