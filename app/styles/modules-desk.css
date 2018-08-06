@@ -1,0 +1,74 @@
+@media screen  and (min-width: 500px) {
+
+
+  /* ========== head elements ========== */
+  
+  .nav {
+    margin-left: 52px;
+    font-family: 'Arial', serif;
+    font-weight: bold;
+  }
+  .nav__link {
+    margin-right: 1.75em;
+    font-size: 16px;
+    text-decoration: none;
+    color: #858585;
+  }
+  .nav__link:hover,
+  .nav__link:focus {
+    color: #333333;
+  }
+
+  /* ========== content elements ========== */
+  .content-main__container {
+    background-image: url(../images/bg2x.png);
+    padding: 20px 20px 0 20px;
+  }
+  /* ---------- device menu style ---------- */
+  .menu-devices {
+    margin: 0 auto 0 15px;
+  }
+  input[class="menu-devices__radio"] {
+    opacity: 0;
+    position: absolute;
+  }
+  .menu-devices__option {
+    background: #F7F7F7;
+    border-radius: 20px;
+    padding: 7px 15px;
+    margin-right: 10px;
+    font-size: 0.8125em;
+    font-weight: bold;
+    transition: .2s ease all;
+  }
+  input[class="menu-devices__radio"]:checked + label,
+  input[class="menu-devices__radio"]:focus + label {
+    background: #FFD93E;
+  }
+  /* ---------- content buttons style ---------- */
+  .content-head-controls {
+    display: flex;
+    flex-flow: row nowrap;
+  }
+  .content-head-controls__btn {
+    margin-left: 20px;
+    border: #333 black;
+    border-width: 0 2px 2px 0;
+    padding: 5px;
+    cursor: pointer;
+    background: transparent;
+    opacity: 0.3;
+    transition: .1s ease all;
+  }
+  .content-head-controls__btn:focus,
+  .content-head-controls__btn:hover {
+    outline: none;
+    opacity: 1;
+  }
+  .btn--prev {
+    transform: rotate(135deg);
+  }
+  .btn--next {
+    transform: rotate(-45deg);
+  }
+}

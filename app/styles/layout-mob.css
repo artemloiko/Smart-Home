@@ -1,0 +1,51 @@
+@media screen  and (max-width: 500px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px;
+    padding-top: 64px;
+  }
+  /* ========== mobile layout changes ========== */
+  .content-main .content-head,
+  .content-head-controls,
+  .menu-devices {
+    display: none;
+  }
+  /* ========== head layout ========== */
+
+  .head {
+    position: fixed;
+    height: 64px;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .nav {
+    position: absolute;
+    width: 70%;
+    height: 100vh;
+    right: 0;
+    top: 66px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .nav-overlay {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 64px;
+  }
+
+  .footer-pages {
+    display: flex;
+    flex-flow: row wrap;
+  }
+
+}

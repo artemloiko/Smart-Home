@@ -22,10 +22,10 @@
       <a href="#scenarios" class="nav__link">Сценарии</a>
     </nav>
   </header>
-  <main class="content">
-    <div class="content-main">
-      <h3 class="content-head">Главное</h3>
-      <div class="content-main__container">
+  <div class="content-main">
+    <h3 class="content-head">Главное</h3>
+    <div class="content-main__container">
+      <div class="content-main__infobox">
         <h2 class="content-main__welcome">Привет, Геннадий!</h2>
         <div class="content-main__info">Двери и окна закрыты, сигнализация включена.</div>
         <div class="content-main__forecasts">
@@ -44,6 +44,7 @@
           </div>
         </div>
       </div>
+
       <div class="content-cards content-main__cards">
         <div class="card card--large">
           <img src="images/icon_temperature.svg" alt="Иконка градусника" class="card__img">
@@ -77,120 +78,120 @@
         </div>
       </div>
     </div>
-    <div class="content-scenarios" id="scenarios">
-      <div class="content-head-container">
-          <h3 class="content-head">Избранные сценарии</h3>
-          <div class="content-head-controls">
-            <button class="content-head-controls__btn btn--prev"></button>
-            <button class="content-head-controls__btn btn--next"></button>
-          </div>
-      </div>
-      <div class="content-cards content-scenarios__cards">
-        <div class="card">
-          <img src="images/icon_sun_2.svg" alt="Иконка солнца" class="card__img">
-          <div class="card__title">Выключить весь свет в доме и во дворе</div>
-        </div>
-        <div class="card">
-          <img src="images/icon_scheduled.svg" alt="Иконка часов" class="card__img">
-          <div class="card__title">Я ухожу</div>
-        </div>
-        <div class="card">
-          <img src="images/icon_sun_2.svg" alt="Иконка солнца" class="card__img">
-          <div class="card__title">Включить свет в коридоре</div>
-        </div>
-        <div class="card">
-          <img src="images/icon_temperature_2.svg" alt="Иконка градусника" class="card__img">
-          <div class="card__title">Набрать горячую ванну</div>
-          <div class="card__subtitle">Начнётся в 18:00</div>
-        </div>
-        <div class="card">
-          <img src="images/icon_temperature_2.svg" alt="Иконка градусника" class="card__img">
-          <div class="card__title">Сделать пол тёплым во всей квартире</div>
-        </div>
-        
-      </div>
-    </div>
-    <div class="content-devices" id="devices">
-      <div class="content-head-container">
-        <h3 class="content-head">Избранные устройства</h3>
-        <select name="devices" id="devices" class="menu-devices-mobile">
-          <option value="all">Все</option>
-          <option value="kitchen">Кухня</option>
-          <option value="hall">Зал</option>
-          <option value="lightbulbs">Лампочки</option>
-          <option value="cameras">Камеры</option>
-        </select>
-        <div class="select-arrow"></div>  
-        <div class="menu-devices">
-          <input type="radio" name="devices" value="all" id="all" checked>
-          <label class="menu-devices__option" for="all">Все</label>
-          
-          <input type="radio" name="devices" value="kitchen" id="kitchen">
-          <label class="menu-devices__option" for="kitchen">Кухня</label>
-
-          <input type="radio" name="devices" value="hall" id="hall">
-          <label class="menu-devices__option" for="hall">Зал</label>
-
-          <input type="radio" name="devices" value="lightbulbs" id="lightbulbs">
-          <label class="menu-devices__option" for="lightbulbs">Лампочки</label>
-
-          <input type="radio" name="devices" value="cameras" id="cameras">
-          <label class="menu-devices__option" for="cameras">Камеры</label>
-        </div>
+  </div>
+  <div class="content-scenarios" id="scenarios">
+    <div class="content-head-container">
+        <h3 class="content-head">Избранные сценарии</h3>
         <div class="content-head-controls">
           <button class="content-head-controls__btn btn--prev"></button>
           <button class="content-head-controls__btn btn--next"></button>
         </div>
+    </div>
+    <div class="content-cards content-scenarios__cards">
+      <div class="card">
+        <img src="images/icon_sun_2.svg" alt="Иконка солнца" class="card__img">
+        <div class="card__title">Выключить весь свет в доме и во дворе</div>
       </div>
-      <div class="content-cards content-devices__cards">
-        <div class="card card--large">
-          <img src="images/icon_sun_2.svg" alt="Иконка солнца" class="card__img">
-          <div class="card__title">Xiaomi Yeelight LED Smart Bulb</div>
-          <div class="card__subtitle">Включено</div>
-        </div>
-        <div class="card card--large">
-          <img src="images/icon_sun.svg" alt="Иконка солнца" class="card__img">
-          <div class="card__title">D-Link Omna 180 Cam</div>
-          <div class="card__subtitle">Включится в 17:00</div>
-        </div>
-        <div class="card card--large">
-          <img src="images/icon_temperature.svg" alt="Иконка градусника" class="card__img">
-          <div class="card__title">Elgato Eve Degree Connected</div>
-          <div class="card__subtitle">Выключено до 17:00</div>
-        </div>
-        <div class="card card--large">
-          <img src="images/icon_sun.svg" alt="Иконка солнца" class="card__img">
-          <div class="card__title">LIFX Mini Day & Dusk A60 E27</div>
-          <div class="card__subtitle">Включится в 17:00</div>
-        </div>
-        <div class="card card--large">
-          <img src="images/icon_sun_2.svg" alt="Иконка солнца" class="card__img">
-          <div class="card__title">Xiaomi Mi Air Purifier 2S</div>
-          <div class="card__subtitle">Включено</div>
-        </div>
-        <div class="card card--large">
-          <img src="images/icon_sun.svg" alt="Иконка солнца" class="card__img">
-          <div class="card__title">Xiaomi Mi Air Purifier 2S</div>
-          <div class="card__subtitle">Выключено</div>
-        </div>
-        <div class="card card--large">
-          <img src="images/icon_sun.svg" alt="Иконка солнца" class="card__img">
-          <div class="card__title">Xiaomi Yeelight LED Smart Bulb</div>
-          <div class="card__subtitle">Включится в 17:00</div>
-        </div>
-        <div class="card card--large">
-          <img src="images/icon_sun.svg" alt="Иконка солнца" class="card__img">
-          <div class="card__title">Xiaomi Yeelight LED Smart Bulb</div>
-          <div class="card__subtitle">Включится в 17:00</div>
-        </div>
-        <div class="card card--large">
-          <img src="images/icon_sun.svg" alt="Иконка солнца" class="card__img">
-          <div class="card__title">Xiaomi Yeelight LED Smart Bulb</div>
-          <div class="card__subtitle">Включится в 17:00</div>
-        </div>
+      <div class="card">
+        <img src="images/icon_scheduled.svg" alt="Иконка часов" class="card__img">
+        <div class="card__title">Я ухожу</div>
+      </div>
+      <div class="card">
+        <img src="images/icon_sun_2.svg" alt="Иконка солнца" class="card__img">
+        <div class="card__title">Включить свет в коридоре</div>
+      </div>
+      <div class="card">
+        <img src="images/icon_temperature_2.svg" alt="Иконка градусника" class="card__img">
+        <div class="card__title">Набрать горячую ванну</div>
+        <div class="card__subtitle">Начнётся в 18:00</div>
+      </div>
+      <div class="card">
+        <img src="images/icon_temperature_2.svg" alt="Иконка градусника" class="card__img">
+        <div class="card__title">Сделать пол тёплым во всей квартире</div>
+      </div>
+      
+    </div>
+  </div>
+  <div class="content-devices" id="devices">
+    <div class="content-head-container">
+      <h3 class="content-head">Избранные устройства</h3>
+      <select name="devices" id="devices" class="menu-devices-mobile">
+        <option value="all">Все</option>
+        <option value="kitchen">Кухня</option>
+        <option value="hall">Зал</option>
+        <option value="lightbulbs">Лампочки</option>
+        <option value="cameras">Камеры</option>
+      </select>
+      <div class="select-arrow"></div>  
+      <div class="menu-devices">
+        <input class="menu-devices__radio" type="radio" name="devices" value="all" id="all" checked>
+        <label class="menu-devices__option" for="all">Все</label>
+        
+        <input class="menu-devices__radio" type="radio" name="devices" value="kitchen" id="kitchen">
+        <label class="menu-devices__option" for="kitchen">Кухня</label>
+
+        <input class="menu-devices__radio" type="radio" name="devices" value="hall" id="hall">
+        <label class="menu-devices__option" for="hall">Зал</label>
+
+        <input class="menu-devices__radio" type="radio" name="devices" value="lightbulbs" id="lightbulbs">
+        <label class="menu-devices__option" for="lightbulbs">Лампочки</label>
+
+        <input class="menu-devices__radio" type="radio" name="devices" value="cameras" id="cameras">
+        <label class="menu-devices__option" for="cameras">Камеры</label>
+      </div>
+      <div class="content-head-controls">
+        <button class="content-head-controls__btn btn--prev"></button>
+        <button class="content-head-controls__btn btn--next"></button>
       </div>
     </div>
-  </main>
+    <div class="content-cards content-devices__cards">
+      <div class="card card--large">
+        <img src="images/icon_sun_2.svg" alt="Иконка солнца" class="card__img">
+        <div class="card__title">Xiaomi Yeelight LED Smart Bulb</div>
+        <div class="card__subtitle">Включено</div>
+      </div>
+      <div class="card card--large">
+        <img src="images/icon_sun.svg" alt="Иконка солнца" class="card__img">
+        <div class="card__title">D-Link Omna 180 Cam</div>
+        <div class="card__subtitle">Включится в 17:00</div>
+      </div>
+      <div class="card card--large">
+        <img src="images/icon_temperature.svg" alt="Иконка градусника" class="card__img">
+        <div class="card__title">Elgato Eve Degree Connected</div>
+        <div class="card__subtitle">Выключено до 17:00</div>
+      </div>
+      <div class="card card--large">
+        <img src="images/icon_sun.svg" alt="Иконка солнца" class="card__img">
+        <div class="card__title">LIFX Mini Day & Dusk A60 E27</div>
+        <div class="card__subtitle">Включится в 17:00</div>
+      </div>
+      <div class="card card--large">
+        <img src="images/icon_sun_2.svg" alt="Иконка солнца" class="card__img">
+        <div class="card__title">Xiaomi Mi Air Purifier 2S</div>
+        <div class="card__subtitle">Включено</div>
+      </div>
+      <div class="card card--large">
+        <img src="images/icon_sun.svg" alt="Иконка солнца" class="card__img">
+        <div class="card__title">Xiaomi Mi Air Purifier 2S</div>
+        <div class="card__subtitle">Выключено</div>
+      </div>
+      <div class="card card--large">
+        <img src="images/icon_sun.svg" alt="Иконка солнца" class="card__img">
+        <div class="card__title">Xiaomi Yeelight LED Smart Bulb</div>
+        <div class="card__subtitle">Включится в 17:00</div>
+      </div>
+      <div class="card card--large">
+        <img src="images/icon_sun.svg" alt="Иконка солнца" class="card__img">
+        <div class="card__title">Xiaomi Yeelight LED Smart Bulb</div>
+        <div class="card__subtitle">Включится в 17:00</div>
+      </div>
+      <div class="card card--large">
+        <img src="images/icon_sun.svg" alt="Иконка солнца" class="card__img">
+        <div class="card__title">Xiaomi Yeelight LED Smart Bulb</div>
+        <div class="card__subtitle">Включится в 17:00</div>
+      </div>
+    </div>
+  </div>
   <footer class="footer">
     <div class="footer-pages">
       <a href="#" class="footer-pages__link">Помощь</a>

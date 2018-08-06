@@ -1,55 +1,21 @@
-.container {
-  display: flex;
-  flex-direction: column;
-  padding: 0 20px;
-}
-/* ========== mobile layout changes ========== */
-.content {
-  margin-top: 64px;
-}
-.content-main .content-head,
-.content-head-controls,
-.menu-devices {
-  display: none;
+
+/* ========== head elements ========== */
+
+.logo {
+  height: 39px;
 }
 
-/* ========== head layout ========== */
-
-.head {
-  position: fixed;
-  height: 64px;
-  top: 0;
-  left: 0;
-  right: 0;
+/* ========== content elements ========== */
+.content-head-container {
   display: flex;
-  flex-direction: row;
+  flex-flow: row nowrap;
+  align-items: center;
   justify-content: space-between;
-  align-items: center;
 }
-
-.nav {
-  position: absolute;
-  width: 70%;
-  height: 100vh;
-  right: 0;
-  top: 66px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-}
-.nav-overlay {
-  position: fixed;
-  left: 0;
-  right: 0;
-  top: 64px;
-}
-
-/* ========== content layout ========== */
-
 .content-cards {
   display: flex;
   flex-flow: row nowrap;
+  overflow: scroll;
   overflow: hidden;
 }
 .card {
@@ -58,19 +24,37 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-end;
-  /* width: 200px;
-  height: 100px; */
+  width: 200px;
+  height: 100px;
   min-width: 200px;
   min-height: 100px;
-  margin-right: 20px;
+  margin: 0 20px 15px 0;
 }
 .card--large {
-  height: 120px;
+  height: 115px;
 }
 
 .content-main {
   display: flex;
   flex-direction: column;
 }
-
-
+/* ---------- scroll style ---------- */
+/* width */
+::-webkit-scrollbar {
+  width: 3px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, .2);
+  /* display: none; */
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, .5); 
+}
+::-webkit-scrollbar-thumb:horizontal {
+  height: 2px;
+}

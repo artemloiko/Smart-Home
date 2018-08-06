@@ -12,7 +12,7 @@ gulp.task('html', function() {
 })
 gulp.task('css',
   function() {
-    return gulp.src('./app/styles/index.css')
+    return gulp.src('./app/index.css')
         .pipe(concatCss('bundle.css'))  
         .pipe(autoprefixer())
         .pipe(cleanCSS())
