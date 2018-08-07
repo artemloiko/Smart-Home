@@ -1,4 +1,19 @@
+.content-main,
+.content-scenarios,
+.content-devices {
+  box-sizing: border-box;
+}
 
+.overlay {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 150;
+  background: #000;
+  opacity: 0;
+  transition: .3s ease all;
+}
 /* ========== head elements ========== */
 
 .logo {
@@ -12,11 +27,8 @@
   align-items: center;
   justify-content: space-between;
 }
-.content-cards {
-  display: flex;
-  flex-flow: row nowrap;
-  overflow: scroll;
-  overflow: hidden;
+.content-head {
+  margin: 10px 0;
 }
 .card {
   box-sizing: border-box;
@@ -24,37 +36,17 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-end;
-  width: 200px;
   height: 100px;
+  max-width: 200px;
   min-width: 200px;
-  min-height: 100px;
-  margin: 0 20px 15px 0;
+  margin-right: 15px;
 }
 .card--large {
   height: 115px;
 }
-
-.content-main {
-  display: flex;
-  flex-direction: column;
-}
-/* ---------- scroll style ---------- */
-/* width */
-::-webkit-scrollbar {
-  width: 3px;
-}
-/* Track */
-::-webkit-scrollbar-track {
-  background: transparent;
-}
-/* Handle */
-::-webkit-scrollbar-thumb {
-  background: rgba(0, 0, 0, .2);
-  /* display: none; */
-}
-::-webkit-scrollbar-thumb:hover {
-  background: rgba(0, 0, 0, .5); 
-}
-::-webkit-scrollbar-thumb:horizontal {
-  height: 2px;
+.card:hover,
+.card:focus {
+  cursor: pointer;
+  background: #fff;
+  box-shadow: 0 2px 6px 0 rgba(197, 186, 186, 0.5);
 }

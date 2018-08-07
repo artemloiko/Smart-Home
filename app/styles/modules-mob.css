@@ -1,4 +1,4 @@
-@media screen  and (max-width: 500px) {
+@media screen and (max-width: 600px) {
 
   .nav-opened {
     overflow: hidden;
@@ -8,6 +8,7 @@
     background: #fff;
     border: none;
     padding: 0 20px;
+    z-index: 100;
   }
 
   /* ---------- nav style ---------- */
@@ -32,11 +33,6 @@
     margin-top: 20px;
     border: 1px solid #858585;
   }
-  .nav-overlay {
-    transition: .3s ease all;
-    background-color: #000;
-    opacity: 0;
-  }
   .nav-toggle {
     position: relative;
     padding: 15px;
@@ -60,7 +56,11 @@
   }
 
   /* ---------- nav-opened changes ---------- */
-  .nav-opened .nav-overlay {
+  .nav-opened .head ~ div,
+  .nav-opened .head ~ footer {
+    filter: blur(2px);
+  }
+  .nav-opened .overlay {
     opacity: 0.5;
     bottom: 0;
   }
@@ -84,15 +84,9 @@
     width: 50%;
   }
   /* ---------- content blocks styles ---------- */
-  .content-scenarios, 
-  .content-devices {
-    margin-top: 10px;
-  }
-  .content-head {
-    margin: 20px 0;
-  }
   .content-main__container {
     background-image: url(../images/bg1x.png);
+    padding: 20px 0 0;
   }
   .content-main__welcome {
     font-size: 1.125em;
@@ -112,47 +106,6 @@
     width: 18px;
   }
 
-  /* ---------- content controls style ---------- */
-  .menu-devices-mobile {
-    box-sizing: border-box;
-    background: #FFD93E;
-    height: 30px;
-    padding-left: 10px;
-    padding-right: 25px;
-    border: none;
-    outline: none;
-    border-radius: 20px;
-
-    text-align: center;
-    font-size: 0.8125em;
-    font-weight: bolder;
-
-    appearance: none;
-  }
-  .select-arrow {
-    width: 0;
-    height: 0;
-    position: absolute;
-    right: 0;
-    transition: .1s ease all;
-  }
-  .select-arrow::after {
-    content: '';
-    display: block;
-    position: absolute;
-    padding: 3px;
-    right: 31px;
-    top: -6px;
-    border: solid black;
-    border-width: 0 2px 2px 0;
-    transform: rotate(45deg);
-  }
-  .menu-devices-mobile:focus {
-    outline: none;
-  }
-  .menu-devices-mobile option {
-    background: #f7f7f7;
-  }
   /* ========== footer elements ========== */
   .footer {
     margin: 30px 0 0;

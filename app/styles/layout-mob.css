@@ -1,4 +1,4 @@
-@media screen  and (max-width: 500px) {
+@media screen and (max-width: 600px) {
   .container {
     display: flex;
     flex-direction: column;
@@ -36,11 +36,37 @@
     justify-content: flex-start;
     align-items: center;
   }
-  .nav-overlay {
-    position: fixed;
-    left: 0;
-    right: 0;
+  .overlay {
+    z-index: 50;
     top: 64px;
+  }
+  /* ---------- content blocks styles ---------- */
+  .content-cards {
+    display: flex;
+    flex-flow: row nowrap;
+    overflow: scroll;
+  }
+  .card {
+    margin-right: 20px;
+    margin-bottom: 20px;
+  }
+  .content-scenarios, 
+  .content-devices {
+    margin-top: 10px;
+  }
+  .content-head {
+    margin: 20px 0;
+  }
+
+  .content-main {
+    display: flex;
+    flex-direction: column;
+  }
+  .content-main__infobox {
+    margin-left: 20px;
+  }
+  .content-main__cards .card:first-child {
+    margin-left: 20px;
   }
 
   .footer-pages {

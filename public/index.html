@@ -5,10 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Task 2</title>
   <link rel="stylesheet" href="bundle.css">
+  <link rel="stylesheet" href="ps/perfect-scrollbar.css">
 </head>
 <body>
 <div class="container">
-  <div class="nav-overlay"></div>
+  <div class="overlay"></div>
   <header class="head">
     <a href="#"><img src="./images/YaHome.svg" alt="Яндекс Дом" class="logo"></a>
     <button class="nav-toggle">
@@ -83,8 +84,8 @@
     <div class="content-head-container">
         <h3 class="content-head">Избранные сценарии</h3>
         <div class="content-head-controls">
-          <button class="content-head-controls__btn btn--prev"></button>
-          <button class="content-head-controls__btn btn--next"></button>
+          <button class="content-head-control btn--prev" disabled></button>
+          <button class="content-head-control btn--next" disabled></button>
         </div>
     </div>
     <div class="content-cards content-scenarios__cards">
@@ -122,7 +123,6 @@
         <option value="lightbulbs">Лампочки</option>
         <option value="cameras">Камеры</option>
       </select>
-      <div class="select-arrow"></div>  
       <div class="menu-devices">
         <input class="menu-devices__radio" type="radio" name="devices" value="all" id="all" checked>
         <label class="menu-devices__option" for="all">Все</label>
@@ -140,8 +140,8 @@
         <label class="menu-devices__option" for="cameras">Камеры</label>
       </div>
       <div class="content-head-controls">
-        <button class="content-head-controls__btn btn--prev"></button>
-        <button class="content-head-controls__btn btn--next"></button>
+        <button class="content-head-control btn--prev" disabled></button>
+        <button class="content-head-control btn--next"></button>
       </div>
     </div>
     <div class="content-cards content-devices__cards">
@@ -203,6 +203,7 @@
   </footer>
 </div>
 <!-- <script src= "bundle.js"></script> -->
+<script src="ps/perfect-scrollbar.js"></script>
 <script src= "script.js"></script>
 </body>
 </html>

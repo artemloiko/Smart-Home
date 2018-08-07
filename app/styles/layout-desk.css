@@ -1,4 +1,4 @@
-@media screen  and (min-width: 500px) {
+@media screen and (min-width: 600px) {
   /* ========== desktop layout changes ========== */
   .nav-overlay,
   .nav-toggle,
@@ -15,7 +15,9 @@
     max-height: 100vh;
     padding: 0 40px;
   }
-  .head {
+  .head,
+  .content-devices,
+  .footer {
     grid-column: 1/7;
   }
   .content-main {
@@ -24,11 +26,15 @@
   .content-scenarios {
     grid-column: 4/7;
   }
-  .content-devices {
-    grid-column: 1/7;
-  }
-  .footer {
-    grid-column: 1/7;
+  .nav-overlay {
+    display: block;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #000000;
+    opacity: .5;
   }
 
   /* ========== page elements layout ========== */
@@ -37,6 +43,15 @@
     align-items: center;
     padding: 20px 0;
   }
+  .content-cards {
+    position: relative;
+    overflow: auto;
+  }
+  .content-head-controls {
+    display: flex;
+    flex-flow: row nowrap;
+  }
+  /* ---------- content main style ---------- */
   .content-main__container {
     display: flex;
     flex-direction: row;
@@ -46,14 +61,47 @@
   .content-main__cards {
     display: block;
   }
+  .content-main__cards .card {
+    margin-bottom: 15px;
+    margin-right: 0;
+  }
+  /* ---------- content scenarios style ---------- */
   .content-scenarios {
     width: 100%;
   }
+  .content-scenarios__cards {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+  }
+  .content-scenarios__cards .card {
+    margin-bottom: 15px;
+    max-width: 250px;
+  }
+  .content-scenarios__cards .card:nth-child(3n) {
+    margin-right: 0;
+  }
+  @supports (display: grid) {
+    .content-scenarios__cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      grid-gap: 15px;
+      padding-bottom: 10px;
+    }
+    .content-scenarios__cards .card {
+      margin: 0;
+    }
+  }
+  /* ---------- content devices style ---------- */
   .content-devices {
     width: 100%;
   }
   .content-devices .content-head {
     margin: 25px 0;
+  }
+  .content-devices__cards {
+    display: flex;
+    flex-flow: row nowrap;
   }
 
   .footer {
@@ -67,6 +115,4 @@
   .footer-pages__link:hover {
     color: #333;
   }
-
-
 }

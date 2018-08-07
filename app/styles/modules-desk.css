@@ -1,8 +1,13 @@
-@media screen  and (min-width: 500px) {
-
-
+@media screen  and (min-width: 600px) {
   /* ========== head elements ========== */
-  
+  .head::after {
+    content: '';
+    position: absolute;
+    border-bottom: 2px solid #f0f0f0;
+    left: 0;
+    right: 0;
+    top: 11%;
+  }
   .nav {
     margin-left: 52px;
     font-family: 'Arial', serif;
@@ -20,9 +25,16 @@
   }
 
   /* ========== content elements ========== */
+  
   .content-main__container {
     background-image: url(../images/bg2x.png);
-    padding: 20px 20px 0 20px;
+    padding: 20px 10px 0 20px;
+  }
+  .content-main__cards {
+    padding-right: 10px;
+  }
+  .content-devices__cards {
+    padding-bottom: 15px;
   }
   /* ---------- device menu style ---------- */
   .menu-devices {
@@ -35,7 +47,7 @@
   .menu-devices__option {
     background: #F7F7F7;
     border-radius: 20px;
-    padding: 7px 15px;
+    padding: 0.4375em 0.9375em;
     margin-right: 10px;
     font-size: 0.8125em;
     font-weight: bold;
@@ -46,24 +58,25 @@
     background: #FFD93E;
   }
   /* ---------- content buttons style ---------- */
-  .content-head-controls {
-    display: flex;
-    flex-flow: row nowrap;
-  }
-  .content-head-controls__btn {
+  
+  .content-head-control {
     margin-left: 20px;
-    border: #333 black;
+    border: solid #333;
     border-width: 0 2px 2px 0;
     padding: 5px;
     cursor: pointer;
     background: transparent;
-    opacity: 0.3;
+    opacity: .9;
     transition: .1s ease all;
   }
-  .content-head-controls__btn:focus,
-  .content-head-controls__btn:hover {
-    outline: none;
+  .content-head-control:disabled {
+    opacity: 0.3;
+  }
+  .content-head-control:active,
+  .content-head-control:focus {
+    border-color: #000;
     opacity: 1;
+    outline: none;
   }
   .btn--prev {
     transform: rotate(135deg);

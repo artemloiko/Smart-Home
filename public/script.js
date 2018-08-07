@@ -1,17 +1,21 @@
 (function () {
   var toggle = document.querySelector('.nav-toggle');
-  // т.к. стрелка selecta имеет position absolute
-  // она вылазит поверх бокового меню, z-index не помогает 
-  // потому что они в разных блоках приходится применять небольшой хак
+
   var arrow = document.querySelector('.select-arrow');  
   toggle.addEventListener('click', function(e) {
-    if(document.body.classList.contains('nav-opened')) {
-      setTimeout(() => arrow.style.zIndex = 0, 100);
-    }
-    else {
-      arrow.style.zIndex = -1;
-    }
     document.body.classList.toggle('nav-opened');
-
   });
 })();
+
+
+if(window.innerWidth > 770) {
+  const mainPS = new PerfectScrollbar('.content-main__cards', {
+    suppressScrollX: true,
+  });
+  const devicesPS = new PerfectScrollbar('.content-devices__cards');
+}
+if(window.innerWidth > 600 && window.innerWidth < 1150) {
+  const scenariosPS = new PerfectScrollbar('.content-scenarios__cards', {
+    suppressScrollX: true,
+  });
+}

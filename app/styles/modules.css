@@ -1,6 +1,4 @@
 
-
-
 /* ========== content elements ========== */
 
 /* ---------- card style ---------- */
@@ -20,14 +18,12 @@
 }
 .card__img {
   margin-bottom: auto;
-  width: 24px;
-  height: 24px;
+  height: 1em;
 }
 /* ---------- content common style ---------- */
 
 .content-head {
   font-size: 1.125em;
-  margin: 10px 0;
 }
 
 /* ---------- content main style ---------- */
