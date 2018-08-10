@@ -4,16 +4,7 @@
   box-sizing: border-box;
 }
 
-.overlay {
-  position: fixed;
-  left: 0;
-  right: 0;
-  top: 0;
-  z-index: 150;
-  background: #000;
-  opacity: 0;
-  transition: .3s ease all;
-}
+
 /* ========== head elements ========== */
 
 .logo {
@@ -45,8 +36,10 @@
   height: 115px;
 }
 .card:hover,
-.card:focus {
+.card:focus,
+.card:active {
   cursor: pointer;
   background: #fff;
   box-shadow: 0 2px 6px 0 rgba(197, 186, 186, 0.5);
 }
+

@@ -18,7 +18,7 @@
 }
 .card__img {
   margin-bottom: auto;
-  height: 1em;
+  height: 1.5em;
 }
 /* ---------- content common style ---------- */
 
@@ -63,7 +63,27 @@
 .forecast__img {
   width: 26px;
 }
-
+/* ---------- radioOption menu style ---------- */
+.menu-radioOptions {
+  margin: 0 auto 0 15px;
+}
+.menu-radioOptions__radio {
+  opacity: 0;
+  position: absolute;
+}
+.menu-radioOptions__option {
+  background: #F7F7F7;
+  border-radius: 20px;
+  padding: 0.4375em 0.9375em;
+  margin-right: 10px;
+  font-size: 0.8125em;
+  font-weight: bold;
+  transition: .2s ease all;
+}
+.menu-radioOptions__radio:checked + label,
+.menu-radioOptions__radio:focus + label {
+  background: #FFD93E;
+}
 
 /* ========== footer elements ========== */
 

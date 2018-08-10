@@ -36,27 +36,7 @@
   .content-devices__cards {
     padding-bottom: 15px;
   }
-  /* ---------- device menu style ---------- */
-  .menu-devices {
-    margin: 0 auto 0 15px;
-  }
-  input[class="menu-devices__radio"] {
-    opacity: 0;
-    position: absolute;
-  }
-  .menu-devices__option {
-    background: #F7F7F7;
-    border-radius: 20px;
-    padding: 0.4375em 0.9375em;
-    margin-right: 10px;
-    font-size: 0.8125em;
-    font-weight: bold;
-    transition: .2s ease all;
-  }
-  input[class="menu-devices__radio"]:checked + label,
-  input[class="menu-devices__radio"]:focus + label {
-    background: #FFD93E;
-  }
+
   /* ---------- content buttons style ---------- */
   
   .content-head-control {

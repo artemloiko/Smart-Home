@@ -14,8 +14,5 @@
     "gulp-autoprefixer": "^5.0.0",
     "gulp-clean-css": "^3.9.4",
     "gulp-concat-css": "^3.1.0"
-  },
-  "dependencies": {
-    "perfect-scrollbar": "^1.4.0"
   }
 }

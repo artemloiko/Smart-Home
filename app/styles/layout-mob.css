@@ -8,7 +8,7 @@
   /* ========== mobile layout changes ========== */
   .content-main .content-head,
   .content-head-controls,
-  .menu-devices {
+  .menu-radioOptions--devices {
     display: none;
   }
   /* ========== head layout ========== */
