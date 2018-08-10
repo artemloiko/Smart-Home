@@ -60,9 +60,12 @@
   .nav-opened .head ~ footer {
     filter: blur(2px);
   }
+
   .nav-opened .overlay {
+    top: 64px;
     opacity: 0.5;
-    bottom: 0;
+    visibility: visible;
+    z-index: 50;
   }
   .nav-opened .nav {
     transform: translate(0);

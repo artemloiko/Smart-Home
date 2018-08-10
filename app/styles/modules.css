@@ -72,6 +72,7 @@
   position: absolute;
 }
 .menu-radioOptions__option {
+  flex-shrink: 0;
   background: #F7F7F7;
   border-radius: 20px;
   padding: 0.4375em 0.9375em;

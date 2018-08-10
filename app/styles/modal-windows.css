@@ -1,5 +1,6 @@
 
 .modal {
+  will-change: visibility, opacity, transform;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -11,6 +12,9 @@
   color: #333;
   opacity: 0;
   visibility: hidden;
+  /* opacity: 1;
+  visibility: visible; */
+
 }
 
 .modal-window {
@@ -43,11 +47,20 @@
 .modal-info__img {
   height: 2.25em;
 }
+.modal--light .modal-info__img {
+  height: 2.5em;
+  margin-right: 10px;
+}
 .modal-control-container .menu-radioOptions {
   display: flex;
+  flex-flow: row nowrap;
   overflow: auto;
   padding-bottom: 7px;
   margin: 0;
+}
+.modal-control-container .menu-radioOptions__option {
+  font-weight: normal;
+  color: #000;
 }
 
 
@@ -60,6 +73,10 @@
   outline: none;
   appearance: none;
   cursor: pointer;
+  transition: all .2s ease;
+}
+.slider:disabled {
+  opacity: .5;
 }
 .slider::-webkit-slider-thumb {
   appearance: none;
@@ -109,6 +126,7 @@
   color: #fff;
   font-size: 1.125em;
   top: 50%;
+  z-index: 1;
 }
 /* ---------- temperature ---------- */
 .slider-wrapper--temperature .slider {
@@ -179,27 +197,21 @@
 
 /* ---------- opened modal ---------- */
 .container {
+  will-change: filer;
   transition: filter .2s ease;
 }
 .overlay {
+  will-change: opacity;
   position: fixed;
   left: 0;
   right: 0;
+  bottom: 0;
   top: 0;
   z-index: 150;
   background: #000;
   opacity: 0;
+  visibility: hidden;
   transition: opacity .2s ease;
-}
-#modal__temp {
-  position: fixed;
-  transform: none;
-  background: #FFF;
-  border-radius: 10px;
-	opacity: 1;
-  transition: opacity .1s ease, 
-              background-color .3s ease-out, 
-              transform .4s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 .modal--active {
@@ -208,24 +220,23 @@
   transition: opacity .1s ease, 
               transform .4s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
-
+.modal-opened {
+  overflow: hidden;
+}
 .modal-opened .container {
   filter: blur(2px);
 }
 .modal-opened .overlay {
- opacity: .5;
- bottom: 0;
+  opacity: .5;
+  visibility: visible;
 }
 @media screen and (max-width: 600px) {
-  body {
-    overflow: hidden;
-  }
   .modal {
     width: 90%;
     min-width: 300px;
   }
   .modal-window {
-    height: 68vh;
+    height: 60vh;
   }
   .modal__title {
     font-size: 1.125em;
@@ -246,22 +257,22 @@
     margin-top: 2vh;
   }
   .slider-mob-wrapper {
-    transform: translateY(20vh) rotate(90deg);
+    transform: translateY(20vh) rotate(-90deg);
   }
   .slider-wrapper {
     margin: 0;
-    width: 50vh;
+    width: 100%; 
   }
   .slider-wrapper--roundTemperature {
     height: 60vh;
   }
   .slider-wrapper::before, 
   .slider-wrapper::after {
-    transform: rotate(-90deg) translate(35%);
+    transform: rotate(90deg) translate(-35%);
   }
   .slider-wrapper--light::before,
   .slider-wrapper--light::after {
-    transform: rotate(-90deg) translate(55%);
+    transform: rotate(90deg) translate(-55%);
   }
 
 }
