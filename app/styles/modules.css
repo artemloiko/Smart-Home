@@ -1,4 +1,22 @@
-
+@keyframes fadeOutUp {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+}
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 /* ========== content elements ========== */
 
 /* ---------- card style ---------- */
@@ -63,6 +81,17 @@
 .forecast__img {
   width: 26px;
 }
+
+
+/* ========== footer elements ========== */
+
+.footer {
+  font-size: 12px;
+  color: #888;
+}
+
+
+/* ========== стили используемые в разных breakpoints ========== */
 /* ---------- radioOption menu style ---------- */
 .menu-radioOptions {
   margin: 0 auto 0 15px;
@@ -85,11 +114,30 @@
 .menu-radioOptions__radio:focus + label {
   background: #FFD93E;
 }
+/* ---------- content device controls style ---------- */
+.menu-devices-mobile {
+  box-sizing: border-box;
+  height: 30px;
+  padding-left: 10px;
+  padding-right: 25px;
+  border: none;
+  outline: none;
+  border-radius: 20px;
 
-/* ========== footer elements ========== */
+  background-color: #FFD93E;
+  background-image: url(../images/L1.png);
+  background-repeat: no-repeat;
+  background-position: 92% 50%;
 
-.footer {
-  font-size: 12px;
-  color: #888;
+  text-align: center;
+  font-size: 0.8125em;
+  font-weight: bolder;
+
+  appearance: none;
 }
-
+.menu-devices-mobile:focus {
+  outline: none;
+}
+.menu-devices-mobile option {
+  background: #f7f7f7;
+}

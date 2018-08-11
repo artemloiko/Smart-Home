@@ -1,4 +1,4 @@
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 900px), (orientation:portrait) and (min-width: 600px) {
   /* ========== desktop layout changes ========== */
   .nav-overlay,
   .nav-toggle,

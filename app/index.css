@@ -3,10 +3,10 @@
 /*================== entry point index.css =============== */
 @import 'styles/base.css';
 @import 'styles/layout.css';
+@import 'styles/modules.css';
 @import 'styles/layout-mob.css';
 @import 'styles/layout-desk.css';
 @import 'styles/layout-breakpoints.css';
-@import 'styles/modules.css';
 @import 'styles/modules-mob.css';
 @import 'styles/modules-desk.css'; 
 @import 'styles/modules-breakpoints.css'; 

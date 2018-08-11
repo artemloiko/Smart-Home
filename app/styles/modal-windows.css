@@ -236,7 +236,8 @@
     min-width: 300px;
   }
   .modal-window {
-    height: 60vh;
+    box-sizing: border-box;
+    height: 70vh;
   }
   .modal__title {
     font-size: 1.125em;
@@ -257,14 +258,18 @@
     margin-top: 2vh;
   }
   .slider-mob-wrapper {
-    transform: translateY(20vh) rotate(-90deg);
+    transform: rotate(-90deg);
   }
   .slider-wrapper {
     margin: 0;
-    width: 100%; 
+    max-width: 100%;
+    width: 90%; 
+    margin-top: 20vh;
+    width: calc(70vh - 130px);
+    margin-top: calc(((70vh - 130px) / 2) - 40px);
   }
   .slider-wrapper--roundTemperature {
-    height: 60vh;
+    height: calc(70vh - 130px);
   }
   .slider-wrapper::before, 
   .slider-wrapper::after {
