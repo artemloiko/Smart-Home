@@ -25,7 +25,9 @@
   }
 
   /* ========== content elements ========== */
-  
+  .content-devices__cards {
+    padding-bottom: 15px;
+  }
   .content-main__container {
     background-image: url(../images/bg2x.png);
     padding: 20px 10px 0 20px;
@@ -33,40 +35,37 @@
   .content-main__cards {
     padding-right: 10px;
   }
-  .content-main__cards::before{
+
+  /* content-main double arrow on cards */
+  .content-main__cards::before {
     content: '';
-    width: 180px;
-    height: 35px;
+    width: 20px;
+    height: 20px;
     position: absolute;
-    background-color: #F8F8F8;
     background-image: url(../images/icon_double_arrow.svg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: 16px;
-    top: 88%;
-    left: 10px;
+    top: 91%;
+    left: 40%;
+    left: calc(50% - 15px);
     transition: opacity .4s ease, 
                 transform .5s ease;
   }
+  @media (min-width: 1400px) { .content-main__cards::before{ top: 94%; } }
+  
   .content-main__cards--out::before {
-    background-color: transparent;
     opacity: 0;
     transform: translateY(-100%);
   }
   .content-main__cards--in::before {
-    background-color: #F8F8F8;
     opacity: 1;
     transform: translateY(0);
-    transition: opacity .4s ease, 
-                transform .5s ease,
-                background-color .3s ease .2s;
   }
-  .content-devices__cards {
-    padding-bottom: 15px;
-  }
+
+  
   
   /* ---------- content buttons style ---------- */
-  
   .content-head-control {
     margin-left: 20px;
     border: solid #333;
@@ -92,6 +91,4 @@
   .btn--next {
     transform: rotate(-45deg);
   }
-
-  
 }

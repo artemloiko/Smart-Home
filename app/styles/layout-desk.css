@@ -51,6 +51,7 @@
     display: flex;
     flex-flow: row nowrap;
   }
+
   /* ---------- content main style ---------- */
   .content-main__container {
     display: flex;
@@ -65,7 +66,9 @@
     margin-bottom: 15px;
     margin-right: 0;
   }
+
   /* ---------- content scenarios style ---------- */
+  /* flex fallback */
   .content-scenarios {
     width: 100%;
   }
@@ -92,6 +95,7 @@
       margin: 0;
     }
   }
+
   /* ---------- content devices style ---------- */
   .content-devices {
     width: 100%;
@@ -103,7 +107,8 @@
     display: flex;
     flex-flow: row nowrap;
   }
-
+  
+  /* ---------- footer blocksstyles ---------- */
   .footer {
     display: flex;
     justify-content: space-between;

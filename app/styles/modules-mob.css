@@ -1,5 +1,5 @@
 @media screen and (max-width: 600px), (orientation:landscape) and (min-width: 600px) and (max-width: 900px) {
-
+  /* nav-opened вешается на body */
   .nav-opened {
     overflow: hidden;
   }
@@ -87,7 +87,12 @@
     transform-origin: 0 100%;
     width: 50%;
   }
+
   /* ---------- content blocks styles ---------- */
+  .card {
+    margin-bottom: 10px;
+  }
+  
   .content-main__container {
     background-image: url(../images/bg1x.png);
     padding: 20px 0 10px;
@@ -99,9 +104,6 @@
   .content-main__info {
     font-size: 0.75em;
     margin-bottom: 15px;
-  }
-  .card {
-    margin-bottom: 10px;
   }
   .forecast__place {
     font-size: 0.75em;

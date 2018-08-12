@@ -9,6 +9,7 @@
     max-width: 250px;
   }
 }
+/* около квадратные мониторы и планшеты */
 @media screen and (min-width: 900px) and (max-width: 1150px) {
   .content-scenarios .content-head-controls {
     display: none;
@@ -34,7 +35,8 @@
     padding-right: 10px;
   }
 }
-@media screen and (min-width: 600px) and (max-width: 900px) and (orientation:portrait) {
+/* планшеты */
+@media screen and (min-width: 600px) and (max-width: 900px) and (orientation:  portrait) {
   .content-head-controls,
   .menu-radioOptions--devices {
     display: none;

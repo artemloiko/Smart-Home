@@ -36,6 +36,7 @@
     justify-content: flex-start;
     align-items: center;
   }
+
   .overlay {
     z-index: 50;
     top: 64px;
@@ -47,15 +48,15 @@
     overflow: scroll;
   }
   .card {
-    margin-right: 20px;
-    margin-bottom: 20px;
-  }
-  .content-scenarios, 
-  .content-devices {
-    margin-top: 10px;
+    margin: 0 20px 20px 0;
   }
   .content-head {
     margin: 20px 0;
+  }
+
+  .content-scenarios, 
+  .content-devices {
+    margin-top: 10px;
   }
 
   .content-main {
@@ -68,7 +69,7 @@
   .content-main__cards .card:first-child {
     margin-left: 20px;
   }
-
+  /* ---------- footer styles ---------- */
   .footer-pages {
     display: flex;
     flex-flow: row wrap;

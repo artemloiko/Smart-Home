@@ -29,4 +29,5 @@ gulp.task('serve', function() {
   gulp.watch('./app/*.html', gulp.series('html'));
 });
 
+gulp.task('build', gulp.series('html', 'css'));
 gulp.task('default', gulp.series('html', 'css', 'serve'));

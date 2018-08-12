@@ -1,7 +1,10 @@
 let mainPS, devicesPS, scenariosPS;
+
 const devicesHeadControls = document.querySelector('.content-devices .content-head-controls');
 const devicesCards = document.querySelector('.content-devices__cards');
 const mainCards = document.querySelector('.content-main__cards');
+
+
 document.addEventListener("DOMContentLoaded", function () {
   setScrolls();
   if(mainCards) {
@@ -49,7 +52,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }, 10);
       }
     } 
-
+    //обработчики кнопок
     devicesHeadControls.addEventListener('click', function(e) {
       if(e.target.classList.contains('btn--next')) {
         devicesHeadControls.firstElementChild.removeAttribute('disabled');
@@ -86,7 +89,6 @@ function setScrolls() {
       suppressScrollX: true,
     });
   }
-  //обработчики кнопок
   
 }
 
@@ -100,6 +102,7 @@ function setScrolls() {
   rangeTemperature.addEventListener('change', function () {
     infoTemperature.innerHTML = this.value > 0 ? '+' + this.value : this.value;
   });
+
   document.addEventListener('click', function (e) {
     //мобильное меню
     if (e.target.closest('.nav-toggle')) {
@@ -167,8 +170,7 @@ function setScrolls() {
   }
 })();
 
-
-// функция с MDN
+// функция с MDN для установки кастомной прокрутки при resize
 var optimizedResize = (function () {
   var callbacks = [],
     running = false;
