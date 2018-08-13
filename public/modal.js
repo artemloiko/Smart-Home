@@ -22,11 +22,9 @@ const Modal = (function () {
       window.requestAnimationFrame(function() {
         m.style.opacity = '';
         m.classList.toggle('modal--active');
+        m.style.transform = '';
       });
     }, 350);
-    setTimeout(function() {
-      m.style.transform = '';
-    }, 500);
   }
 
   const handlerHideModal = function (e) {
