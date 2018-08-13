@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
   setScrolls();
   if(mainCards) {
     mainCards.addEventListener('ps-scroll-down', function() {
-      if(mainCards.scrollTop > 10 &&  mainCards.classList.contains('content-main__cards--in')) {
+      if(mainCards.scrollTop > 10) {
         mainCards.classList.remove('content-main__cards--in');
         mainCards.classList.add('content-main__cards--out');
       }
@@ -21,9 +21,11 @@ document.addEventListener("DOMContentLoaded", function () {
   }
   if(devicesPS) {
     devicesCards.addEventListener('ps-x-reach-end', function() {
+        devicesHeadControls.firstElementChild.removeAttribute('disabled');
       devicesHeadControls.lastElementChild.setAttribute('disabled', true);
     })
     devicesCards.addEventListener('ps-x-reach-start', function() {
+      devicesHeadControls.lastElementChild.removeAttribute('disabled');
       devicesHeadControls.firstElementChild.setAttribute('disabled', true);
     })
     
@@ -78,18 +80,19 @@ function setScrolls() {
     scenariosPS.destroy();
     scenariosPS = null;
   }
+
   if (window.matchMedia("(min-width: 900px)").matches) {
     mainPS = new PerfectScrollbar('.content-main__cards', {
       suppressScrollX: true,
     });
     devicesPS = new PerfectScrollbar(devicesCards);
   }
+
   if (window.matchMedia("(min-width: 900px) and (max-width: 1150px)").matches) {
     scenariosPS = new PerfectScrollbar('.content-scenarios__cards', {
       suppressScrollX: true,
     });
   }
-  
 }
 
 

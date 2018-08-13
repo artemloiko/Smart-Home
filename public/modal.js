@@ -22,11 +22,9 @@ const Modal = (function () {
       window.requestAnimationFrame(function() {
         m.style.opacity = '';
         m.classList.toggle('modal--active');
+        m.style.transform = '';
       });
     }, 350);
-    setTimeout(function() {
-      m.style.transform = '';
-    }, 500);
   }
 
   const handlerHideModal = function (e) {
@@ -49,7 +47,6 @@ const Modal = (function () {
     scaleX = (cardProps.width / mProps.width).toFixed(3);
     scaleY = (cardProps.height / mProps.height).toFixed(3);
 
-
     mLeftScaled =  xc + mProps.width / 2  - (mProps.width / 2) * scaleX;
     mTopScaled =  yc + mProps.height / 2  - (mProps.height / 2) * scaleY;
 
@@ -61,12 +58,10 @@ const Modal = (function () {
 
     m.addEventListener('click', handlerHideModal);
     
-    setTimeout(function() {
-			window.requestAnimationFrame(function() {
-        showModal();
-        isOpen = true;
-			});
-    }, 100);
+    window.requestAnimationFrame(function() {
+      showModal();
+      isOpen = true;
+    });
   };
 
   return {
